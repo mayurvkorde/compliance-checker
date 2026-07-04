@@ -17,8 +17,8 @@ regulation -> [retrieve: ChromaDB] -> [audit: LLM] ->  ComplianceReport (JSON + 
 ```
 bash
 cd compliance-checker
-python -m venv compliance_env
-compliance_env/Scripts/activate
+python -m venv env_compliance
+env_compliance/Scripts/activate
 pip install -r requirements.txt
 ```
 
