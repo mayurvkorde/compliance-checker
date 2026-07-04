@@ -19,7 +19,6 @@ bash
 cd compliance-checker
 python -m venv .venv && .venv/Scripts/activate
 pip install -r requirements.txt
-cp.env.example.env      #add your LLM key (+ optional LangSmith/Langfuse keys)
 ```
 
 ## Run
