@@ -24,6 +24,7 @@ async def run_compliance_check(regulation_id: str) -> Dict:
     graph_result = await compiled_graph.ainvoke(
         {"regulation_id": regulation_id, "regulation_text": regulation["mandate"]},
         config={
+            "callbacks": [observability.handler],
             "run_id": observability.run_id,
             "run_name": f"compliance-check:: {regulation_id}",
             "tags": ["compliance-checker", regulation_id],
